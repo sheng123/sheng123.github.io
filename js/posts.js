@@ -1,1 +1,1 @@
-[{"title":"Hello World","date":"2017.07.24","uri":"2017/07/24/hello-world/","excerpt":""}]
+[{"title":"digitalocean and shadowsocks","date":"2017.07.24","uri":"2017/07/24/digitalocean-and-shadowsocks/","excerpt":""},{"title":"Hello World","date":"2017.07.24","uri":"2017/07/24/hello-world/","excerpt":""}]
