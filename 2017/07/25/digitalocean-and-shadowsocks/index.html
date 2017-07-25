@@ -5,17 +5,28 @@
   
   <title>digitalocean-and-shadowsocks | sheng&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean注册digitalocean请点击这里      创建Droplets配置shadowsocks配置chrome浏览器">
+  <meta name="description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean 注册digitalocean请点击这里     输入自己的用户名和密码进行注册，后面也可以添加双重认证以提高安全性      创建Droplets 现在已经有了一个digitalocean的账号，接下来要创建一个虚拟专用服务器vps         如上图所示，点击create，点击">
 <meta property="og:type" content="article">
 <meta property="og:title" content="digitalocean-and-shadowsocks">
 <meta property="og:url" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/index.html">
 <meta property="og:site_name" content="sheng&#39;s blog">
-<meta property="og:description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean注册digitalocean请点击这里      创建Droplets配置shadowsocks配置chrome浏览器">
+<meta property="og:description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean 注册digitalocean请点击这里     输入自己的用户名和密码进行注册，后面也可以添加双重认证以提高安全性      创建Droplets 现在已经有了一个digitalocean的账号，接下来要创建一个虚拟专用服务器vps         如上图所示，点击create，点击">
 <meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/register.png">
-<meta property="og:updated_time" content="2017-07-25T08:25:47.000Z">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/create_droplets.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/choose_image.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/choose_size.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/choose_datacenter.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/add_ssh_key.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/new_ssh_key.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/finish_create.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/centos.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/shadowsocks_local.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/switchyomega.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/Wechat.png">
+<meta property="og:updated_time" content="2017-07-25T13:33:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="digitalocean-and-shadowsocks">
-<meta name="twitter:description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean注册digitalocean请点击这里      创建Droplets配置shadowsocks配置chrome浏览器">
+<meta name="twitter:description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean 注册digitalocean请点击这里     输入自己的用户名和密码进行注册，后面也可以添加双重认证以提高安全性      创建Droplets 现在已经有了一个digitalocean的账号，接下来要创建一个虚拟专用服务器vps         如上图所示，点击create，点击">
 <meta name="twitter:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/register.png">
   
     <link rel="alternate" href="/atom.xml" title="sheng&#39;s blog" type="application/atom+xml">
@@ -96,13 +107,89 @@
         <blockquote>
 <p>本文主要介绍如何通过digitalocean和shadowsocks翻墙    </p>
 </blockquote>
-<h2 id="注册digitalocean"><a href="#注册digitalocean" class="headerlink" title="注册digitalocean"></a>注册digitalocean</h2><p>注册digitalocean请点击<a href="https://m.do.co/c/2a56c27bcaf2" target="_blank" rel="external">这里</a></p>
-<p><div align="left"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/register.png" width="50%" height="%50"><br></div></p>
-<h2 id="创建Droplets"><a href="#创建Droplets" class="headerlink" title="创建Droplets"></a>创建Droplets</h2><h2 id="配置shadowsocks"><a href="#配置shadowsocks" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h2><h2 id="配置chrome浏览器"><a href="#配置chrome浏览器" class="headerlink" title="配置chrome浏览器"></a>配置chrome浏览器</h2>
+<h2 id="注册digitalocean"><a href="#注册digitalocean" class="headerlink" title="注册digitalocean"></a>注册digitalocean</h2><blockquote>
+<p>注册digitalocean请点击<a href="https://m.do.co/c/2a56c27bcaf2" target="_blank" rel="external">这里</a></p>
+<p><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/register.png" width="70%" height="%70"><br></div><br>输入自己的用户名和密码进行注册，后面也可以添加双重认证以提高安全性    </p>
+</blockquote>
+<h2 id="创建Droplets"><a href="#创建Droplets" class="headerlink" title="创建Droplets"></a>创建Droplets</h2><blockquote>
+<p>现在已经有了一个digitalocean的账号，接下来要创建一个虚拟专用服务器<code>vps</code></p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/create_droplets.png" width="40%" height="%40"><br></div>
+
+<blockquote>
+<p>如上图所示，点击create，点击Droplets，会出现下面图中的界面</p>
+<hr>
+</blockquote>
+<h3 id="选择镜像"><a href="#选择镜像" class="headerlink" title="选择镜像"></a>选择镜像</h3><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/choose_image.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>上图中选择一个 <code>image</code> 其实就是Linux系统， <code>Ubuntu</code> <code>CentOS</code> 都可以，我这里选择的是 <code>CentOS</code></p>
+<hr>
+</blockquote>
+<h3 id="选择服务器配置"><a href="#选择服务器配置" class="headerlink" title="选择服务器配置"></a>选择服务器配置</h3><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/choose_size.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>接下来选择适合你配置的服务器，这里我选择的每月<code>5美元</code>的这个，如果你是土豪那就可以选择后面配置高的。其实我觉着<code>5美元</code>这个已经能够满足需求了。相关的 <code>CPU</code> <code>disk</code> <code>transfer</code> 等都有详细的说明，不多介绍。</p>
+<hr>
+</blockquote>
+<h3 id="选择数据中心"><a href="#选择数据中心" class="headerlink" title="选择数据中心"></a>选择数据中心</h3><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/choose_datacenter.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>选择一个合适的数据中心，个人认为 <code>San Francisco</code> 好点，因为离大陆相对较近，网速会快</p>
+<hr>
+</blockquote>
+<h3 id="添加ssh-key"><a href="#添加ssh-key" class="headerlink" title="添加ssh-key"></a>添加ssh-key</h3><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/add_ssh_key.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>这里要把你个人电脑的 <code>ssh-key</code> 添加进去。<code>ssh-key</code>的生成办法，请看<a href="http://www.jianshu.com/p/d400a5a43ff7" target="_blank" rel="external">这里</a>。</p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/new_ssh_key.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>得到 <code>id_rsa.pub</code> 后，把里面的内容拷贝复制到 <code>SSH key content</code> 里面，起一个名字。</p>
+<hr>
+</blockquote>
+<div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/finish_create.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>给你自己的主机起个名字，整个配置就完成了</p>
+</blockquote>
+<p><strong>创建过程中牵涉到支付，我本人选择的是PayPal，具体操作也不是很复杂，自己研究下就好</strong></p>
+<h2 id="配置shadowsocks"><a href="#配置shadowsocks" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h2><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/centos.png" width="70%" height="%70"><br></div>
+
+<h3 id="登录到远程主机"><a href="#登录到远程主机" class="headerlink" title="登录到远程主机"></a>登录到远程主机</h3><blockquote>
+<p>如上图中会有自己远程主机的 <code>ipv4</code> 地址，本地打开一个 <code>终端</code> 以 <code>root</code> 权限登录。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh root@`your ipv4`</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h3 id="配置shadowsocks-1"><a href="#配置shadowsocks-1" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h3><p>登录到你的远程服务器以后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
+<p>下面是<code>shadowsocks.json</code>的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> &quot;server&quot;:&quot;your ipv4&quot;,</div><div class="line"> &quot;server_port&quot;:123456,</div><div class="line"> &quot;local_address&quot;: &quot;127.0.0.1&quot;,</div><div class="line"> &quot;local_port&quot;:1080,</div><div class="line"> &quot;password&quot;:&quot;your password&quot;,</div><div class="line"> &quot;timeout&quot;:300,</div><div class="line"> &quot;method&quot;:&quot;aes-256-cfb&quot;,</div><div class="line"> &quot;fast_open&quot;: false</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>server</code> ： 是你自己的服务器的ipv4地址<br><code>server_port</code> ：可以随便选取，这里我随便写了一个123456<br><code>local_address</code> ： 为 <code>127.0.0.1</code><br><code>local_port</code> ： 为 <code>1080</code><br><code>password</code> ： 自己定一个密码<br><code>method</code> ： 最好选取 <code>aes-256-cfb</code> 这种加密方式</p>
+<h3 id="启动服务器shadowsocks"><a href="#启动服务器shadowsocks" class="headerlink" title="启动服务器shadowsocks"></a>启动服务器shadowsocks</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div><div class="line">ssserver -c /etc/shadowsocks.json -d stop</div></pre></td></tr></table></figure>
+<p>上面两条命令来开启和关闭shadowsocks服务</p>
+<h3 id="本地配置shadowsocks"><a href="#本地配置shadowsocks" class="headerlink" title="本地配置shadowsocks"></a>本地配置shadowsocks</h3><div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/shadowsocks_local.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>上图是本地客户端配置<br><code>本地端口</code> ： 自己配一个，我就配的是  <code>8119</code><br><code>服务器列表</code> ： 就是服务器的ipv4地址<br><code>服务器地址</code> ： ipv4地址，一样的<br><code>服务器端口</code> ： 服务器的 <code>server_port</code><br><code>服务密码</code> ： 服务器的 <code>password</code></p>
+</blockquote>
+<h2 id="配置chrome浏览器"><a href="#配置chrome浏览器" class="headerlink" title="配置chrome浏览器"></a>配置chrome浏览器</h2><blockquote>
+<p><code>chrome</code> 浏览器上添加一个扩展程序 <code>SwitchyOmega</code></p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/switchyomega.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p><code>代理端口</code> ： 就是本地 <code>shadowsocks</code> 配置的 <code>本地端口</code> 我的是<code>8119</code><br><strong><em>现在就可以翻墙啦</em></strong><br>如有问题可以给我发邮件，<strong><em>联系方式在右下角</em></strong></p>
+</blockquote>
+<h2 id="赞赏"><a href="#赞赏" class="headerlink" title="赞赏"></a>赞赏</h2><blockquote>
+<p>如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作！</p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/07/25/digitalocean-and-shadowsocks/Wechat.png" width="20%" height="%20"><br></div>
+
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/" data-id="cj5jbh3i20000ugu5vsq1czgf" class="article-share-link">分享</a>
+      <a data-url="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/" data-id="cj5jmhs2m000287u5qka0xc5b" class="article-share-link">分享</a>
       
       
       
@@ -193,7 +280,7 @@
       
         <strong class="toc-title">文章目录</strong>
         <div class="toc-widget-list">
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册digitalocean"><span class="toc-number">1.</span> <span class="toc-text">注册digitalocean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Droplets"><span class="toc-number">2.</span> <span class="toc-text">创建Droplets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置shadowsocks"><span class="toc-number">3.</span> <span class="toc-text">配置shadowsocks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置chrome浏览器"><span class="toc-number">4.</span> <span class="toc-text">配置chrome浏览器</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册digitalocean"><span class="toc-number">1.</span> <span class="toc-text">注册digitalocean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Droplets"><span class="toc-number">2.</span> <span class="toc-text">创建Droplets</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#选择镜像"><span class="toc-number">2.1.</span> <span class="toc-text">选择镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择服务器配置"><span class="toc-number">2.2.</span> <span class="toc-text">选择服务器配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择数据中心"><span class="toc-number">2.3.</span> <span class="toc-text">选择数据中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加ssh-key"><span class="toc-number">2.4.</span> <span class="toc-text">添加ssh-key</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置shadowsocks"><span class="toc-number">3.</span> <span class="toc-text">配置shadowsocks</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#登录到远程主机"><span class="toc-number">3.1.</span> <span class="toc-text">登录到远程主机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置shadowsocks-1"><span class="toc-number">3.2.</span> <span class="toc-text">配置shadowsocks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动服务器shadowsocks"><span class="toc-number">3.3.</span> <span class="toc-text">启动服务器shadowsocks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地配置shadowsocks"><span class="toc-number">3.4.</span> <span class="toc-text">本地配置shadowsocks</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置chrome浏览器"><span class="toc-number">4.</span> <span class="toc-text">配置chrome浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#赞赏"><span class="toc-number">5.</span> <span class="toc-text">赞赏</span></a></li></ol>
           </div>
       </div>
     </div>
