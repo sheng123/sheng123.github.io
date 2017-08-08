@@ -112,7 +112,7 @@
 <meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/centos.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/shadowsocks_local.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/07/25/digitalocean-and-shadowsocks/switchyomega.png">
-<meta property="og:updated_time" content="2017-08-03T15:59:33.000Z">
+<meta property="og:updated_time" content="2017-08-08T06:18:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手教你用digitalocean和shadowsocks科学上网">
 <meta name="twitter:description" content="本文主要介绍如何通过digitalocean和shadowsocks翻墙      注册digitalocean 注册digitalocean请点击这里,用我的邀请链接注册的话，你的账户可以立即到账 10美元，够用两个月了，好爽，这个是digitalocean搞的推广         输入自己的用户名和密码进行注册，后面也可以添加双重认证以提高安全性创建过程中牵涉到支付，我本人选择的是PayPa">
@@ -462,8 +462,12 @@
 <p>如上图中会有自己远程主机的 <code>ipv4</code> 地址，本地打开一个 <code>终端</code> 以 <code>root</code> 权限登录。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh root@`your ipv4`</div></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
-<h3 id="配置shadowsocks-1"><a href="#配置shadowsocks-1" class="headerlink" title="配置shadowsocks"></a>配置shadowsocks</h3><blockquote>
-<p>登录到你的远程服务器以后</p>
+<h3 id="配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」"><a href="#配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」" class="headerlink" title="配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」"></a>配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」</h3><blockquote>
+<p>登录到你的远程服务器以后<br>下载shadowsocks服务器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install python-setuptools</div><div class="line">easy_install pip</div><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
+<blockquote>
+<p>然后配置shadowsocks的配置文件</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/shadowsocks.json</div></pre></td></tr></table></figure>
 <blockquote>
@@ -729,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册digitalocean"><span class="nav-number">1.</span> <span class="nav-text">注册digitalocean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Droplets"><span class="nav-number">2.</span> <span class="nav-text">创建Droplets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择镜像"><span class="nav-number">2.1.</span> <span class="nav-text">选择镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择服务器配置"><span class="nav-number">2.2.</span> <span class="nav-text">选择服务器配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择数据中心"><span class="nav-number">2.3.</span> <span class="nav-text">选择数据中心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加ssh-key"><span class="nav-number">2.4.</span> <span class="nav-text">添加ssh-key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置shadowsocks"><span class="nav-number">3.</span> <span class="nav-text">配置shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录到远程主机"><span class="nav-number">3.1.</span> <span class="nav-text">登录到远程主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置shadowsocks-1"><span class="nav-number">3.2.</span> <span class="nav-text">配置shadowsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器shadowsocks"><span class="nav-number">3.3.</span> <span class="nav-text">启动服务器shadowsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地配置shadowsocks"><span class="nav-number">3.4.</span> <span class="nav-text">本地配置shadowsocks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置chrome浏览器"><span class="nav-number">4.</span> <span class="nav-text">配置chrome浏览器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册digitalocean"><span class="nav-number">1.</span> <span class="nav-text">注册digitalocean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Droplets"><span class="nav-number">2.</span> <span class="nav-text">创建Droplets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择镜像"><span class="nav-number">2.1.</span> <span class="nav-text">选择镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择服务器配置"><span class="nav-number">2.2.</span> <span class="nav-text">选择服务器配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择数据中心"><span class="nav-number">2.3.</span> <span class="nav-text">选择数据中心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加ssh-key"><span class="nav-number">2.4.</span> <span class="nav-text">添加ssh-key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置shadowsocks"><span class="nav-number">3.</span> <span class="nav-text">配置shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录到远程主机"><span class="nav-number">3.1.</span> <span class="nav-text">登录到远程主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」"><span class="nav-number">3.2.</span> <span class="nav-text">配置shadowsocks「这里是对应centos的配置，Ubuntu的配置类似」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器shadowsocks"><span class="nav-number">3.3.</span> <span class="nav-text">启动服务器shadowsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地配置shadowsocks"><span class="nav-number">3.4.</span> <span class="nav-text">本地配置shadowsocks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置chrome浏览器"><span class="nav-number">4.</span> <span class="nav-text">配置chrome浏览器</span></a></li></ol></div>
             
 
           </div>
