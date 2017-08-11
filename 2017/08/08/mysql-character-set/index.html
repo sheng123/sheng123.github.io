@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/character_set.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/collations.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/server_config.png">
-<meta property="og:updated_time" content="2017-08-11T07:02:02.000Z">
+<meta property="og:updated_time" content="2017-08-11T07:05:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL字符集">
 <meta name="twitter:description" content="##字符集概述  字符集是一套符号和编码的规则，不论是在 Oracle 数据库还是在 MySQL 数据库，都存在字符集的选择问题，而且如果在数据库创建阶段没有正确选择字符集，那么可能在后期需要更换字符集，而字符集的更换是代价比较高的操作，也存在一定的风险，所以，在应用开始阶段，就按照需求正确的选择合适的字符集，避免后期不必要的调整。  自己的理解：比如说我们输入一个汉字「汉」，用了 UTF8这种字">
@@ -399,6 +399,7 @@
 <hr>
 <p><strong><em>自己的理解：</em></strong>比如说我们输入一个汉字「汉」，用了 <code>UTF8</code>这种字符集，那么在UTF8这种字符集里面就有「汉」对应的四个字节表示的二进制，计算机是能够识别这些二进制的，但是不能够识别汉字，因此就有了字符集。（汉字有那么多，想想这个工作量还挺大的）</p>
 <hr>
+<a id="more"></a>
 <p>字符集有很多种，我比较熟悉的有  <code>ASCII</code> , <code>LATIN1</code> , <code>GBK</code> , <code>UTF8</code> 等<br><code>ASCII</code> 码用一个字节来表示字符，因此可以表示的字符非常有限<br><code>GBK</code> 字符集：支持中文<br><code>UTF8</code> 字符集：<code>Unicode</code> 字符集的一种，是计算机科学领域里的一项业界标准</p>
 </blockquote>
 <p>##<font color="#0099ff"><code>MySQL</code> 支持的字符集 </font></p>
@@ -406,13 +407,13 @@
 <p><code>MySQL</code> 服务器可以支持多种字符集，我们可以通过下面命令查看</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show character <span class="built_in">set</span>;</div></pre></td></tr></table></figure>
-<div align="center"><br>    <img src="/2017/08/08/mysql-character-set/character_set.png" width="70%" height="%70"><br></div>
+<div align="center"><br>    <img src="/2017/08/08/mysql-character-set/character_set.png" width="30%" height="%30"><br></div>
 
 <blockquote>
 <p><code>MySQL</code> 在同一台服务器，同一个数据库，甚至同一表的不同字段都可以指定使用不同的字符集，相比 <code>Oracle</code> 等其他数据库管理系统，在同一个数据库只能使用相同的字符集，<code>MySQL</code> 明显存在更大的灵活性。<br><code>MySQL</code> 字符集包括字符集和校队规则两个概念。字符集是用来定义 <code>MySQL</code> 存储字符串的方式，校对规则是定义了比较字符串的方式「大小写」。字符集和校对规则是一对多的关系。<br>可以通过下面的命令查看某个字符集对应的校对规则</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show collation like <span class="string">'utf8%'</span></div></pre></td></tr></table></figure>
-<div align="center"><br>    <img src="/2017/08/08/mysql-character-set/collations.png" width="70%" height="%70"><br></div>
+<div align="center"><br>    <img src="/2017/08/08/mysql-character-set/collations.png" width="30%" height="%30"><br></div>
 
 <p><strong><em>校对规则特征</em></strong></p>
 <blockquote>
