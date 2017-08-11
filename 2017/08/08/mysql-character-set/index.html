@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/character_set.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/collations.png">
 <meta property="og:image" content="http://sheng123.github.io/2017/08/08/mysql-character-set/server_config.png">
-<meta property="og:updated_time" content="2017-08-11T07:05:22.000Z">
+<meta property="og:updated_time" content="2017-08-11T07:15:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL字符集">
 <meta name="twitter:description" content="##字符集概述  字符集是一套符号和编码的规则，不论是在 Oracle 数据库还是在 MySQL 数据库，都存在字符集的选择问题，而且如果在数据库创建阶段没有正确选择字符集，那么可能在后期需要更换字符集，而字符集的更换是代价比较高的操作，也存在一定的风险，所以，在应用开始阶段，就按照需求正确的选择合适的字符集，避免后期不必要的调整。  自己的理解：比如说我们输入一个汉字「汉」，用了 UTF8这种字">
@@ -424,8 +424,11 @@
 <p>建议在能够完全满足应用的前提下，尽量使用小的字符集。因为更小的字符集意味着能够节省空间、减少网络传输字节数，同时由于存储空间的较小间接的提高了系统的性能。<br>有很多字符集可以保存汉字，比如 <code>UTF8</code> 、 <code>GB2312</code> 、 <code>GBK</code> 等。根据应用的需要来选择， <code>GB2312</code> 字库比 <code>GBK</code> 字库小，有些偏僻字不能保存。</p>
 <p><code>Unicode</code> 和 <code>UTF-8</code> 有何区别，找个一篇很好的文章，点击<a href="https://www.zhihu.com/question/23374078" target="_blank" rel="external">这里</a><br>简单来说 <code>Unicode</code> 是「字符集」，为每一个「字符」分配一个唯一的ID（码位）；<code>UTF-8</code> 是「编码规则」，将「码位」转换为字节序列的规则「编码/解码 可以理解为 加密/解密 的过程」</p>
 </blockquote>
-<p>##<font color="#0099ff">MySQL字符集的设置 </font><br>MySQL的字符集和校对规则有4个级别的默认设置：服务器级、数据库级、表级和字段级。<br>服务器字符集和校对，在MySQL服务启动的时候确定。<br>可以在my.cnf中设置：<br>[mysqld]<br>default-character-set=utf8<br>或者在启动选项中指定：<br>mysqld –default-character-set=utf8<br>或者在编译的时候指定：<br>./configure –with-charset=utf8</p>
+<p>##<font color="#0099ff">MySQL字符集的设置 </font></p>
+<blockquote>
+<p>MySQL的字符集和校对规则有4个级别的默认设置：服务器级、数据库级、表级和字段级。<br>服务器字符集和校对，在MySQL服务启动的时候确定。<br>可以在my.cnf中设置：<br>[mysqld]<br>default-character-set=utf8<br>或者在启动选项中指定：<br>mysqld –default-character-set=utf8<br>或者在编译的时候指定：<br>./configure –with-charset=utf8</p>
 <p>现在做的项目是在启动的时候进行配置的</p>
+</blockquote>
 <div align="center"><br>    <img src="/2017/08/08/mysql-character-set/server_config.png" width="50%" height="%50"><br></div>
 
 <blockquote>
