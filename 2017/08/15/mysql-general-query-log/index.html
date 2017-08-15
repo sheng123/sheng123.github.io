@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, World" />
+  <meta name="keywords" content="MySQL," />
 
 
 
@@ -93,17 +93,21 @@
 
 
 
-<meta name="description" content="莫道君行早，更有早行人。">
+<meta name="description" content="问题：日常工作过程中会遇到明明 SQL 语句在 Navicat 里面运行是没有问题的，但是在代码里面的时候运行就会出现问题，没有得到自己想要的结果。那么就可以通过 MySQL 的「通用查询日志」来查看实际运行的 SQL 语句，快速定位到问题。">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql general query log">
+<meta property="og:title" content="MySQL 通用查询日志（general query log）">
 <meta property="og:url" content="http://sheng123.github.io/2017/08/15/mysql-general-query-log/index.html">
 <meta property="og:site_name" content="sheng&#39;s blog">
-<meta property="og:description" content="莫道君行早，更有早行人。">
+<meta property="og:description" content="问题：日常工作过程中会遇到明明 SQL 语句在 Navicat 里面运行是没有问题的，但是在代码里面的时候运行就会出现问题，没有得到自己想要的结果。那么就可以通过 MySQL 的「通用查询日志」来查看实际运行的 SQL 语句，快速定位到问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-15T09:49:54.000Z">
+<meta property="og:image" content="http://sheng123.github.io/2017/08/15/mysql-general-query-log/show_general_query.png">
+<meta property="og:image" content="http://sheng123.github.io/2017/08/15/mysql-general-query-log/cat_general_query.png">
+<meta property="og:updated_time" content="2017-08-15T14:11:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql general query log">
-<meta name="twitter:description" content="莫道君行早，更有早行人。">
+<meta name="twitter:title" content="MySQL 通用查询日志（general query log）">
+<meta name="twitter:description" content="问题：日常工作过程中会遇到明明 SQL 语句在 Navicat 里面运行是没有问题的，但是在代码里面的时候运行就会出现问题，没有得到自己想要的结果。那么就可以通过 MySQL 的「通用查询日志」来查看实际运行的 SQL 语句，快速定位到问题。">
+<meta name="twitter:image" content="http://sheng123.github.io/2017/08/15/mysql-general-query-log/show_general_query.png">
 
 
 
@@ -137,7 +141,7 @@
 
 
 
-  <title>mysql general query log | sheng's blog</title>
+  <title>MySQL 通用查询日志（general query log） | sheng's blog</title>
   
 
 
@@ -285,7 +289,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://sheng123.github.io/2017/08/15/mysql-general-query-log/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -303,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql general query log</h1>
+          <h1 class="post-title" itemprop="name headline">MySQL 通用查询日志（general query log）</h1>
         
 
         <div class="post-meta">
@@ -325,6 +329,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -366,7 +392,32 @@
       
 
       
-        
+        <blockquote>
+<p>问题：日常工作过程中会遇到明明 <code>SQL</code> 语句在 <code>Navicat</code> 里面运行是没有问题的，但是在代码里面的时候运行就会出现问题，没有得到自己想要的结果。那么就可以通过 <code>MySQL</code> 的「通用查询日志」来查看实际运行的 <code>SQL</code> 语句，快速定位到问题。</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>查看「通用查询日志」是否开启，以及通用日志保存的位置</p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/08/15/mysql-general-query-log/show_general_query.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>命令开启和关闭「通用查询日志」</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span> global general_log=on;</div><div class="line"><span class="built_in">set</span> global general_log=off;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>去对应的文件查看「通用查询日志」的内容</p>
+</blockquote>
+<div align="center"><br>    <img src="/2017/08/15/mysql-general-query-log/cat_general_query.png" width="70%" height="%70"><br></div>
+
+<blockquote>
+<p>这个文件就可以看到在代码运行的时候，实际请求数据库时候的 <code>SQL</code> 语句是什么，很好用！</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>问题：在查看数据库的 <code>data</code> 文件夹里面的内容的时候，会有访问权限的限制，因为该文件夹 <code>root</code> 用户也不能访问。<br>解决：因此我们可以直接把该文件打印出来，用 <code>cat</code> 、<code>less</code> 或 <code>more</code> 命令都可以</p>
+</blockquote>
+
       
     </div>
 
@@ -413,6 +464,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+        </div>
       
 
       
@@ -737,7 +794,7 @@
         var disqus_config = function () {
           this.page.url = 'http://sheng123.github.io/2017/08/15/mysql-general-query-log/';
           this.page.identifier = '2017/08/15/mysql-general-query-log/';
-          this.page.title = 'mysql general query log';
+          this.page.title = 'MySQL 通用查询日志（general query log）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://sheng.disqus.com/embed.js';
