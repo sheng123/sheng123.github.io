@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="sheng&#39;s blog">
 <meta property="og:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T06:14:25.000Z">
+<meta property="og:updated_time" content="2018-01-24T06:56:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的nohup命令">
 <meta name="twitter:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
@@ -402,7 +402,7 @@
 <blockquote>
 <p>上面例子中末尾的 <code>&amp;</code> 表示后台运行该条命令； <code>nohup</code> 表示不挂起该条命令，关闭终端之后该命令依然在运行。</p>
 </blockquote>
-<p> <code>&gt;</code> 表示重定向到哪里，例如： <code>echo &quot;123&quot; &gt; /home/123.txt</code><br> <code>/dev/null</code> 表示空设备文件，意思就是所有的输出都不进行保存<br> <code>1</code> 代表 <code>stdout</code> 标准输出，系统默认值是1<br> <code>2</code> 代表 <code>stderr</code> 标准错误<br> <code>&amp;</code> 代表等同于的意思， <code>2&gt;&amp;1</code> 表示2的输出重定向等同于1<br> <code>&gt; /dev/null 2&gt;&amp;1</code> 语句含义：<br>&nbsp;&nbsp;首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息；<br>&nbsp;&nbsp;然后，标准错误输出等同于标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
+<p> <code>&gt;</code> 表示重定向到哪里，例如： <code>echo &quot;123&quot; &gt; /home/123.txt</code><br> <code>/dev/null</code> 表示空设备文件，意思就是所有的输出都不进行保存<br> <code>1</code> 代表 <code>stdout</code> 标准输出<br> <code>2</code> 代表 <code>stderr</code> 标准错误<br> <code>2&gt;&amp;1</code> 表示 <code>2</code> 的输出重定向为 <code>1</code> ；（这里 <code>2&gt;1</code> 看起来是一个更好的方式把标准错误重定向到标准输出，但是容易把 <code>1</code> 误解为一个文件，因此加上了 <code>&amp;</code> 标明是一个文件描述符而不是一个文件名，因此写成 <code>2&gt;&amp;1</code> ）<br> <code>&gt; /dev/null 2&gt;&amp;1</code> 语句含义：<br>&nbsp;&nbsp;首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息；<br>&nbsp;&nbsp;然后，标准错误输出等同于标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
 <h2 id="退出任务"><a href="#退出任务" class="headerlink" title="退出任务"></a>退出任务</h2><blockquote>
 <p>如果运行的任务在当前 <code>shell</code> 终端，可以通过 <code>jobs</code> 命令查询相关信息，并且杀掉进程。</p>
 </blockquote>
