@@ -538,27 +538,16 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 <code>nohup</code> 命令</p>
 </blockquote>
-<h2 id="命令简介"><a href="#命令简介" class="headerlink" title="命令简介"></a>命令简介</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DESCRIPTION</div><div class="line">     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored. </div><div class="line">     If the standard output is a terminal, the standard output is appended to the file nohup.out in the current directory. </div><div class="line">     If standard error is a terminal, it is directed to the same place as the standard output.</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nohup Command [Arg ...] [&amp;]</div></pre></td></tr></table></figure>
-<p>该命令可以在你退出账户/关闭终端之后继续运行相应的进程。 <code>nohup</code> 就是不挂起的意思（<code>no hang up</code>）。</p>
-<p><code>nohup</code> 运行由 <code>Command</code> 和相关的 <code>Arg</code> 参数指定的命令，忽略所有挂断（<code>SIGHUP</code>）信号。要想后台运行 <code>nohup</code> 中的命令，只需要在整个命令的结尾添加 <code>&amp;</code>。</p>
-<p>如果使用 <code>nohup</code> 命令提交作业，那么在缺省情况下该作业的所有输出都被重定向到一个名为 <code>nohup.out</code> 的文件中，除非另外指定了输出文件。</p>
-<h2 id="使用举例"><a href="#使用举例" class="headerlink" title="使用举例"></a>使用举例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>上面例子中末尾的 <code>&amp;</code> 表示后台运行该条命令； <code>nohup</code> 表示不挂起该条命令，关闭终端之后该命令依然在运行。</p>
-</blockquote>
-<p> <code>&gt;</code> 表示重定向到哪里，例如： <code>echo &quot;123&quot; &gt; /home/123.txt</code><br> <code>/dev/null</code> 表示空设备文件，意思就是所有的输出都不进行保存<br> <code>1</code> 代表 <code>stdout</code> 标准输出，系统默认值是1<br> <code>2</code> 代表 <code>stderr</code> 标准错误<br> <code>&amp;</code> 代表等同于的意思， <code>2&gt;&amp;1</code> 表示2的输出重定向等同于1<br> <code>&gt; /dev/null 2&gt;&amp;1</code> 语句含义：<br>&nbsp;&nbsp;首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息；<br>&nbsp;&nbsp;然后，标准错误输出等同于标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
-<h2 id="退出任务"><a href="#退出任务" class="headerlink" title="退出任务"></a>退出任务</h2><blockquote>
-<p>如果运行的任务在当前 <code>shell</code> 终端，可以通过 <code>jobs</code> 命令查询相关信息，并且杀掉进程。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 查看当前 shell 终端的后台运行任务进程信息</div><div class="line">$ jobs</div><div class="line">[1]+ Running nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div><div class="line"># 杀掉任务号</div><div class="line">$ kill %1</div><div class="line"># 或着找到 pid</div><div class="line">$ jobs -l</div><div class="line">[1]+ 11076 Running nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div><div class="line">$ kill 11076</div><div class="line"># 或着</div><div class="line">$ fg # 置为前端运行</div><div class="line">Ctrl + c # 退出</div></pre></td></tr></table></figure>
-<p>如果非当前 <code>shell</code> 终端，可以通过 <code>ps aux | grep client_darwin_amd64</code> 获取 <code>pid</code> 然后 <code>kill pid</code></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/23/linux-nohup/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令  命令简介1234DESCRIPTION     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored.      If the standard o">
+<meta name="description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux的nohup命令">
 <meta property="og:url" content="http://sheng123.github.io/2018/01/23/linux-nohup/index.html">
 <meta property="og:site_name" content="sheng&#39;s blog">
-<meta property="og:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令  命令简介1234DESCRIPTION     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored.      If the standard o">
+<meta property="og:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-24T05:55:07.000Z">
+<meta property="og:updated_time" content="2018-01-24T06:14:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的nohup命令">
-<meta name="twitter:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令  命令简介1234DESCRIPTION     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored.      If the standard o">
+<meta name="twitter:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
 
 
 
@@ -392,6 +392,7 @@
         <blockquote>
 <p>如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 <code>nohup</code> 命令</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="命令简介"><a href="#命令简介" class="headerlink" title="命令简介"></a>命令简介</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DESCRIPTION</div><div class="line">     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored. </div><div class="line">     If the standard output is a terminal, the standard output is appended to the file nohup.out in the current directory. </div><div class="line">     If standard error is a terminal, it is directed to the same place as the standard output.</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nohup Command [Arg ...] [&amp;]</div></pre></td></tr></table></figure>
 <p>该命令可以在你退出账户/关闭终端之后继续运行相应的进程。 <code>nohup</code> 就是不挂起的意思（<code>no hang up</code>）。</p>
