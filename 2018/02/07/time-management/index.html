@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="时间管理," />
 
 
 
@@ -93,21 +93,18 @@
 
 
 
-<meta name="description" content="Linux系统里面会运行很多程序，我们想要查看系统里面运行了哪些程序；可以利用 ps 命令来获取某一时刻的系统程序快照；也可以用 top 命令来获取程序的动态情况。">
-<meta name="keywords" content="Linux">
+<meta name="description" content="本文是看了「奇特的一生」之后的总结">
+<meta name="keywords" content="时间管理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux的ps命令">
-<meta property="og:url" content="http://sheng123.github.io/2018/01/26/linux-ps/index.html">
+<meta property="og:title" content="时间管理">
+<meta property="og:url" content="http://sheng123.github.io/2018/02/07/time-management/index.html">
 <meta property="og:site_name" content="sheng&#39;s blog">
-<meta property="og:description" content="Linux系统里面会运行很多程序，我们想要查看系统里面运行了哪些程序；可以利用 ps 命令来获取某一时刻的系统程序快照；也可以用 top 命令来获取程序的动态情况。">
+<meta property="og:description" content="本文是看了「奇特的一生」之后的总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://sheng123.github.io/2018/01/26/linux-ps/psl.jpeg">
-<meta property="og:image" content="http://sheng123.github.io/2018/01/26/linux-ps/psaux.jpeg">
-<meta property="og:updated_time" content="2018-01-26T06:58:48.000Z">
+<meta property="og:updated_time" content="2018-02-07T06:46:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux的ps命令">
-<meta name="twitter:description" content="Linux系统里面会运行很多程序，我们想要查看系统里面运行了哪些程序；可以利用 ps 命令来获取某一时刻的系统程序快照；也可以用 top 命令来获取程序的动态情况。">
-<meta name="twitter:image" content="http://sheng123.github.io/2018/01/26/linux-ps/psl.jpeg">
+<meta name="twitter:title" content="时间管理">
+<meta name="twitter:description" content="本文是看了「奇特的一生」之后的总结">
 
 
 
@@ -135,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://sheng123.github.io/2018/01/26/linux-ps/"/>
+  <link rel="canonical" href="http://sheng123.github.io/2018/02/07/time-management/"/>
 
 
 
 
 
-  <title>Linux的ps命令 | sheng's blog</title>
+  <title>时间管理 | sheng's blog</title>
   
 
 
@@ -290,7 +287,7 @@
   
 
   <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sheng123.github.io/2018/01/26/linux-ps/">
+    <link itemprop="mainEntityOfPage" href="http://sheng123.github.io/2018/02/07/time-management/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jing Sheng">
@@ -307,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux的ps命令</h1>
+          <h1 class="post-title" itemprop="name headline">时间管理</h1>
         
 
         <div class="post-meta">
@@ -319,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T10:48:14+08:00">
-                2018-01-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T10:24:31+08:00">
+                2018-02-07
               </time>
             
 
@@ -342,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/time-management/" itemprop="url" rel="index">
+                    <span itemprop="name">time management</span>
                   </a>
                 </span>
 
@@ -360,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/26/linux-ps/#comments" itemprop="discussionUrl">
+                <a href="/2018/02/07/time-management/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/26/linux-ps/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/02/07/time-management/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -393,30 +390,72 @@
 
       
         <blockquote>
-<p>Linux系统里面会运行很多程序，我们想要查看系统里面运行了哪些程序；可以利用 <code>ps</code> 命令来获取某一时刻的系统程序快照；也可以用 <code>top</code> 命令来获取程序的动态情况。</p>
+<p>本文是看了「奇特的一生」之后的总结</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="命令简介"><a href="#命令简介" class="headerlink" title="命令简介"></a>命令简介</h2><p>命令格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps [options]</div></pre></td></tr></table></figure>
-<p>参数列表：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-A : 所有的进程都显示出来</div><div class="line">-a : 与终端没有关联的所有进程</div><div class="line">-u : 有效使用者相关的进程</div><div class="line">x  : 通常与a这个参数一起使用，可列出比较完整信息。</div></pre></td></tr></table></figure>
-<h2 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h2><blockquote>
-<p><code>ps</code> 命令参数比较复杂，直接背两个组合命令会更好一点。</p>
-</blockquote>
-<p><code>「ps -l」</code> 用来查询自己的 <code>bash</code> 终端里面都有哪些进程。</p>
-<p>如下图展示了 <code>ps -l</code> 命令的输出:</p>
-<div align="center"><br>    <img src="/2018/01/26/linux-ps/psl.jpeg" width="70%" height="%70"><br></div>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">S： 代表这个程序的状态（STAT），主要的状态有：</div><div class="line">    1.R 该程序正在运行</div><div class="line">    2.S 该程序目前正在睡眠状态，但可以被唤醒</div><div class="line">    3.D 不可被唤醒的睡眠状态</div><div class="line">    4.T 停止状态，可能是在工作控制或除错状态</div><div class="line">    5.Z 僵尸状态，程序已经终止但却无法被移除至内存外</div><div class="line"></div><div class="line">UID/PID/PPID： 代表该进程的所有者/进程的ID/此进程的父进程ID</div><div class="line"></div><div class="line">C： 代表CPU使用率，单位为百分比</div><div class="line"></div><div class="line">PRI/NI：Priority/Nice的缩写，代表此程序被CPU所执行的优先级，数值越小代表该程序越快被CPU执行。</div><div class="line"></div><div class="line">ADDR/SZ/WCHAN： 都与内存有关，ADDR是指出该程序在内存的哪个部分，如果是running的程序，一般会显示「-」 SZ代表此程序用掉多少内存 WCHAN表示目前程序是否运行，运行用「-」表示。</div><div class="line"></div><div class="line">TTY： 登入者的终端机位置，若为远程登录则使用动态终端接口（pts/n)</div><div class="line"></div><div class="line">TIME： 使用掉的CPU时间，注意，是此程序实际花费CPU运行的时间，而不是系统时间</div><div class="line"></div><div class="line">CMD： 就是command的缩写，此进程的触发指令</div></pre></td></tr></table></figure>
-<blockquote>
-<p>另外一条命令 <code>ps aux</code> 观察系统所有程序</p>
-</blockquote>
-<p>如下图：</p>
-<div align="center"><br>    <img src="/2018/01/26/linux-ps/psaux.jpeg" width="70%" height="%70"><br></div>
-
-<p>命令 <code>ps aux</code> 显示的项目中，各字段的意义为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">USER： 该进程属于哪个使用者</div><div class="line">PID： 进程ID</div><div class="line">%CPU： 该进程使用掉的CPU资源百分比</div><div class="line">%MEM： 该进程所占用的物理内存百分比</div><div class="line">VSZ： 该进程使用掉的虚拟内存量</div><div class="line">RSS： 该进程占用的固定内存量</div><div class="line">TTY： 该进程是在哪个终端机上面运行，若与终端机无关则显示？</div><div class="line">STAT： 该进程目前的状态</div><div class="line">START： 该进程触发启动的时间</div><div class="line">TIME： 该实际使用CPU运行时间</div><div class="line">COMMAND： 就是command的缩写，此进程的触发指令</div></pre></td></tr></table></figure>
-<p>这两条命令都是系统某一时刻的进程快照，如果想看到进程的实时状态，可以使用 <code>top</code> 命令</p>
+<p>时间统计法可以分为记录、分析和改进这三个步骤</p>
+<h2 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h2><p>开始用纸笔或者软件记录自己日常的时间开销。<br>这个阶段的目标主要是找到适合自己的记录方式和工具。</p>
+<table>
+<thead>
+<tr>
+<th>时间段</th>
+<th>事件</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7：00-7：10</td>
+<td>起床、上洗手间</td>
+<td>10分钟</td>
+</tr>
+<tr>
+<td>7：25</td>
+<td>刷牙洗脸</td>
+<td>15分钟</td>
+</tr>
+<tr>
+<td>7：40</td>
+<td>准备早餐</td>
+<td>25分钟</td>
+</tr>
+<tr>
+<td>8：05</td>
+<td>早餐</td>
+<td>10分钟</td>
+</tr>
+<tr>
+<td>。。。。</td>
+</tr>
+</tbody>
+</table>
+<p>这个阶段通常发生在刚接触时间统计法时，希望了解自己的“时间都去哪了”，在看到自己一周或者一个月时间记录的数据时会有恍然大悟的感觉。</p>
+<h2 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h2><p>时常会忘记「记录时间」这件事。<br>一天中会发生很多事情，要每一件事情都记录下来，包括事情之间的切换其实很难的。<br>要找一种适合自己的记录方式；如果工作方式是坐在办公室里面，那就可以找个本子随时记录自己的时间开销；如果是经常出行，需要一款比较适合的APP来记录，比如“iTimelog”</p>
+<h2 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h2><p>基本不会漏记，但对「记录时间」有焦虑感。<br>这个阶段，基本上记录时间的习惯已经养成，能够连续30天以上记录自己的时间开销。</p>
+<p><code>这种隐约的焦虑感不会消失或减弱，这是时间统计法的代价之一？？</code></p>
+<p>应对焦虑的办法是把注意力放在如何分析自己得到的时间开销数据上，看看有哪些事情可以多做，哪些事情可以少做，并在下一个周期去看看效果。</p>
+<p>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">对于读书上花的时间，可以统计每周自己的读书时间，比如在18年1月每天平均的阅读时间是30分钟左右，</div><div class="line">通过分析自己阅读的时间段，发现早晨和午休时段可以增加更多的阅读时间，改进后，</div><div class="line">2月在统计每天的阅读时间，阅读时间是否有提高？</div></pre></td></tr></table></figure></p>
+<h2 id="第四阶段"><a href="#第四阶段" class="headerlink" title="第四阶段"></a>第四阶段</h2><p>定期分析时间开销，对如何「事件分类」感兴趣。</p>
+<p>在学会对某些单项的时间分类进行记录、分析、改进以后，会发现如何选择记录下来的事件对我们分析和改进的效果有着巨大的影响。</p>
+<p>通常比较关注的大都是工作、学习方面的事件，比如读书、某个重要项目、锻炼身体、写作，但在生活中其实还有很多事件的发生是不由我们控制的，比如每天都要做的日常洗漱、吃饭、休息等。</p>
+<h2 id="第五阶段"><a href="#第五阶段" class="headerlink" title="第五阶段"></a>第五阶段</h2><p>试用他人的分类法，并建立自己的分类。</p>
+<p>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">公司工作、个人学习、身体锻炼</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">健康、事业、家庭、社交、成长、精神、财务</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">睡眠、投资时间、消费时间、浪费时间、消耗时间</div></pre></td></tr></table></figure>
+<h2 id="第六阶段"><a href="#第六阶段" class="headerlink" title="第六阶段"></a>第六阶段</h2><p>设定不同分类的时间预算，并能达成目标。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">工作、自我教育、财务自由、职业发展、家庭关系、日常事务、精神信仰、娱乐休闲</div></pre></td></tr></table></figure>
+<p>这些方面在一个月的时间内都要分配到一定的时间，具体而言就是除去睡觉和工作，其他7个方面每个月的最低时间花费每个不低于20小时。</p>
+<p>每个月720个小时，除去176个小时工作，240个小时睡眠，还剩下304小时，7个方面耗时底线加起来共140小时，大约是空闲时间的一般。</p>
+<h2 id="第七阶段"><a href="#第七阶段" class="headerlink" title="第七阶段"></a>第七阶段</h2><p>即使暂停一段时间统计，也能掌控时间开销。</p>
+<p>达到第六段位，应该算是基本掌握时间统计法了，在这个时候，不妨尝试停止你的时间记录行为，可以停止一周、两周，甚至一个月。</p>
+<p>暂停时间记录是为了观察我们的自我管理会不会因此而脱轨，如果你能够感知到自己的生活模式没有大幅度的变化，那就是一个好消息。</p>
+<p>我们做任何事情最好不忘初心，每个人开始时间统计法的原因可能不同，但大的方向都是希望掌控自己的生活，不让时间虚度，如果暂停时间统计也能掌控生活，那完全可以这样做。</p>
+<h2 id="第八阶段"><a href="#第八阶段" class="headerlink" title="第八阶段"></a>第八阶段</h2><p>了解自己的时间纹理，并学会创造纹理。</p>
+<p>时间纹理实质是「有结构的时间」。长期时间统计实践中发现，时间运用的效率并不是平均分布的，在某些时段效率就很高，比如早晨起床这段时间，我们几乎不用动脑地进行起床洗漱吃早餐的动作，这原因就在于这段时间是「有结构的」。</p>
+<p>比如我希望自己每天晚上可以静坐10分钟，前几天可能需要刻意提醒去做这件事，后面连续两个星期以后，完全就是下意识的行为，这样就创造了时间纹理。</p>
+<h2 id="第九阶段"><a href="#第九阶段" class="headerlink" title="第九阶段"></a>第九阶段</h2><p>悟道时间的稀缺性，产生对时间的敬畏。</p>
+<p>生命是极为复杂的现象，时间本质上是万物运动的体现，用好我们白驹过隙般的人生是一个并不轻松的事情。</p>
 
       
     </div>
@@ -467,7 +506,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/时间管理/" rel="tag"># 时间管理</a>
           
         </div>
       
@@ -480,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/23/kcptun/" rel="next" title="手把手教你用kcptun加速，获得更快的访问速度">
-                <i class="fa fa-chevron-left"></i> 手把手教你用kcptun加速，获得更快的访问速度
+              <a href="/2018/01/26/linux-ps/" rel="next" title="Linux的ps命令">
+                <i class="fa fa-chevron-left"></i> Linux的ps命令
               </a>
             
           </div>
@@ -489,10 +528,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/07/time-management/" rel="prev" title="时间管理">
-                时间管理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -658,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令简介"><span class="nav-number">1.</span> <span class="nav-text">命令简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用举例"><span class="nav-number">2.</span> <span class="nav-text">应用举例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一阶段"><span class="nav-number">1.</span> <span class="nav-text">第一阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二阶段"><span class="nav-number">2.</span> <span class="nav-text">第二阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三阶段"><span class="nav-number">3.</span> <span class="nav-text">第三阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四阶段"><span class="nav-number">4.</span> <span class="nav-text">第四阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五阶段"><span class="nav-number">5.</span> <span class="nav-text">第五阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六阶段"><span class="nav-number">6.</span> <span class="nav-text">第六阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七阶段"><span class="nav-number">7.</span> <span class="nav-text">第七阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八阶段"><span class="nav-number">8.</span> <span class="nav-text">第八阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九阶段"><span class="nav-number">9.</span> <span class="nav-text">第九阶段</span></a></li></ol></div>
             
 
           </div>
@@ -821,9 +856,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://sheng123.github.io/2018/01/26/linux-ps/';
-          this.page.identifier = '2018/01/26/linux-ps/';
-          this.page.title = 'Linux的ps命令';
+          this.page.url = 'http://sheng123.github.io/2018/02/07/time-management/';
+          this.page.identifier = '2018/02/07/time-management/';
+          this.page.title = '时间管理';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://sheng.disqus.com/embed.js';
