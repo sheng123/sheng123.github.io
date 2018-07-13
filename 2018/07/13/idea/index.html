@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="骚操作," />
 
 
 
@@ -93,18 +93,20 @@
 
 
 
-<meta name="description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
-<meta name="keywords" content="Linux">
+<meta name="description" content="本文主要介绍如何正确的打开官方idea">
+<meta name="keywords" content="骚操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux的nohup命令">
-<meta property="og:url" content="http://sheng123.github.io/2018/01/23/linux-nohup/index.html">
+<meta property="og:title" content="IntelliJ IDEA license server服务器搭建">
+<meta property="og:url" content="http://sheng123.github.io/2018/07/13/idea/index.html">
 <meta property="og:site_name" content="sheng&#39;s blog">
-<meta property="og:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
+<meta property="og:description" content="本文主要介绍如何正确的打开官方idea">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-25T06:07:31.000Z">
+<meta property="og:image" content="http://sheng123.github.io/2018/07/13/idea/idea_active.png">
+<meta property="og:updated_time" content="2018-07-13T12:39:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux的nohup命令">
-<meta name="twitter:description" content="如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 nohup 命令">
+<meta name="twitter:title" content="IntelliJ IDEA license server服务器搭建">
+<meta name="twitter:description" content="本文主要介绍如何正确的打开官方idea">
+<meta name="twitter:image" content="http://sheng123.github.io/2018/07/13/idea/idea_active.png">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://sheng123.github.io/2018/01/23/linux-nohup/"/>
+  <link rel="canonical" href="http://sheng123.github.io/2018/07/13/idea/"/>
 
 
 
 
 
-  <title>Linux的nohup命令 | sheng's blog</title>
+  <title>IntelliJ IDEA license server服务器搭建 | sheng's blog</title>
   
 
 
@@ -287,7 +289,7 @@
   
 
   <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sheng123.github.io/2018/01/23/linux-nohup/">
+    <link itemprop="mainEntityOfPage" href="http://sheng123.github.io/2018/07/13/idea/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jing Sheng">
@@ -304,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux的nohup命令</h1>
+          <h1 class="post-title" itemprop="name headline">IntelliJ IDEA license server服务器搭建</h1>
         
 
         <div class="post-meta">
@@ -316,8 +318,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T15:49:29+08:00">
-                2018-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T19:48:06+08:00">
+                2018-07-13
               </time>
             
 
@@ -339,8 +341,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/technology/" itemprop="url" rel="index">
+                    <span itemprop="name">technology</span>
                   </a>
                 </span>
 
@@ -357,9 +359,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/01/23/linux-nohup/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/13/idea/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/23/linux-nohup/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/13/idea/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -390,26 +392,37 @@
 
       
         <blockquote>
-<p>如果正在运行一个进程，在终端退出的时候不想该进程结束，那么就可以使用 <code>nohup</code> 命令</p>
+<p>本文主要介绍如何正确的打开官方idea</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="命令简介"><a href="#命令简介" class="headerlink" title="命令简介"></a>命令简介</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DESCRIPTION</div><div class="line">     The nohup utility invokes utility with its arguments and at this time sets the signal SIGHUP to be ignored. </div><div class="line">     If the standard output is a terminal, the standard output is appended to the file nohup.out in the current directory. </div><div class="line">     If standard error is a terminal, it is directed to the same place as the standard output.</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nohup Command [Arg ...] [&amp;]</div></pre></td></tr></table></figure>
-<p>该命令可以在你退出账户/关闭终端之后继续运行相应的进程。 <code>nohup</code> 就是不挂起的意思（<code>no hang up</code>）。</p>
-<p><code>nohup</code> 运行由 <code>Command</code> 和相关的 <code>Arg</code> 参数指定的命令，忽略所有挂断（<code>SIGHUP</code>）信号。要想后台运行 <code>nohup</code> 中的命令，只需要在整个命令的结尾添加 <code>&amp;</code>。</p>
-<p>如果使用 <code>nohup</code> 命令提交作业，那么在缺省情况下该作业的所有输出都被重定向到一个名为 <code>nohup.out</code> 的文件中，除非另外指定了输出文件。</p>
-<h2 id="使用举例"><a href="#使用举例" class="headerlink" title="使用举例"></a>使用举例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div></pre></td></tr></table></figure>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><blockquote>
+<p>1.IntelliJIDEALicenseServer</p>
+<ul>
+<li>下载idea license server包：<strong><em><a href="http://blog.lanyus.com/archives/228.html" target="_blank" rel="external">下载</a></em></strong></li>
+<li>解压安装包：根据32还是64位、平台（linux、mac、win等选择合适的执行文件，其中mac选择的是darwin x64）。<br>2.supervisor</li>
+</ul>
+</blockquote>
+<h2 id="骚操作"><a href="#骚操作" class="headerlink" title="骚操作"></a>骚操作</h2><blockquote>
+<p>一、第一种方法<br>    根据你的操作系统的不同直接在本地运行下载后的对应的license server就可以启动了。</p>
+<hr>
+<p>二、第二种方法<br>    把Linux文件上传到一台远程的Linux主机，然后用supervisor管理该程序</p>
+<p>服务上创建如下目录</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p /root/app/creak/&#123;logs,run,conf&#125;</div></pre></td></tr></table></figure>
+<p>conf目录下面 vim supervisor.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">[supervisord]</div><div class="line">directory = /root/app/creak/</div><div class="line">logfile = /root/app/creak/logs/info.log</div><div class="line">pidfile = /root/app/creak/run/pid.pid</div><div class="line"></div><div class="line">[supervisorctl]</div><div class="line">serverurl = unix:///root/app/creak/run/pro.sock</div><div class="line"></div><div class="line">[unix_http_server]</div><div class="line">file = /root/app/creak/run/pro.sock</div><div class="line"></div><div class="line">[rpcinterface:supervisor]</div><div class="line">supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface</div><div class="line"></div><div class="line">[program:creak]</div><div class="line">user = root</div><div class="line">process_name = creak</div><div class="line">autostart = true</div><div class="line">autorestart = true</div><div class="line">stdout_logfile = /root/app/creak/logs/creak.log</div><div class="line">stderr_logfile = /root/app/creak/logs/err.log</div><div class="line">command = /root/app/creak/IntelliJIDEALicenseServer_linux_amd64</div></pre></td></tr></table></figure>
 <blockquote>
-<p>上面例子中末尾的 <code>&amp;</code> 表示后台运行该条命令； <code>nohup</code> 表示不挂起该条命令，关闭终端之后该命令依然在运行。</p>
+<p>把对应的license server放到对应的目录下面，然后启动supervisor来管理license server；当进程停止的时候，可以自动把进程启动。很不错！！！</p>
 </blockquote>
-<p> <code>&gt;</code> 表示重定向到哪里，例如： <code>echo &quot;123&quot; &gt; /home/123.txt</code><br> <code>/dev/null</code> 表示空设备文件，意思就是所有的输出都不进行保存<br> <code>1</code> 代表 <code>stdout</code> 标准输出<br> <code>2</code> 代表 <code>stderr</code> 标准错误<br> <code>2&gt;&amp;1</code> 表示 <code>2</code> 的输出重定向为 <code>1</code> ；（这里 <code>2&gt;1</code> 看起来是一个更好的方式把标准错误重定向到标准输出，但是容易把 <code>1</code> 误解为一个文件，因此加上了 <code>&amp;</code> 标明是一个文件描述符而不是一个文件名，因此写成 <code>2&gt;&amp;1</code> ）<br> <code>&gt; /dev/null 2&gt;&amp;1</code> 语句含义：<br>&nbsp;&nbsp;首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息；<br>&nbsp;&nbsp;然后，标准错误输出等同于标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
-<h2 id="退出任务"><a href="#退出任务" class="headerlink" title="退出任务"></a>退出任务</h2><blockquote>
-<p>如果运行的任务在当前 <code>shell</code> 终端，可以通过 <code>jobs</code> 命令查询相关信息，并且杀掉进程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#mv IntelliJIDEALicenseServer_linux_amd64 app/creak/</div><div class="line"># chmod +x app/creak/IntelliJIDEALicenseServer_linux_amd64</div><div class="line"># supervisorctl -c app/creak/conf/supervisor.conf reload</div></pre></td></tr></table></figure>
+<p>本地文件上传到远程服务器可以使用如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ~/Downloads/IntelliJIDEALicenseServer/IntelliJIDEALicenseServer_linux_amd64 realworld:~</div></pre></td></tr></table></figure>
+<h2 id="注册成功"><a href="#注册成功" class="headerlink" title="注册成功"></a>注册成功</h2><blockquote>
+<p>输入你的远程服务器的IP地址，端口号就是1017</p>
+<div align="center"><br>    <img src="/2018/07/13/idea/idea_active.png" width="70%" height="%70"><br></div>
+
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># 查看当前 shell 终端的后台运行任务进程信息</div><div class="line">$ jobs</div><div class="line">[1]+ Running nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div><div class="line"># 杀掉任务号</div><div class="line">$ kill %1</div><div class="line"># 或着找到 pid</div><div class="line">$ jobs -l</div><div class="line">[1]+ 11076 Running nohup ./client_darwin_amd64 -c /etc/kcptun/kcptun.json &gt; /dev/null 2&gt;&amp;1 &amp;</div><div class="line">$ kill 11076</div><div class="line"># 或着</div><div class="line">$ fg # 置为前端运行</div><div class="line">Ctrl + c # 退出</div></pre></td></tr></table></figure>
-<p>如果非当前 <code>shell</code> 终端，可以通过 <code>ps aux | grep client_darwin_amd64</code> 获取 <code>pid</code> 然后 <code>kill pid</code></p>
-<p><code>jobs</code> 命令的一些参数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-l ：除了列出job number与指令串之外，同时列出PID的号码；</div><div class="line">-r ：仅列出正在背景run的工作；</div><div class="line">-s ：仅列出正在背景当中暂停的工作。</div></pre></td></tr></table></figure>
+<p>然后就可以愉快的使用了</p>
 
       
     </div>
@@ -460,7 +473,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/骚操作/" rel="tag"># 骚操作</a>
           
         </div>
       
@@ -473,8 +486,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/15/mysql-general-query-log/" rel="next" title="MySQL 通用查询日志（general query log）">
-                <i class="fa fa-chevron-left"></i> MySQL 通用查询日志（general query log）
+              <a href="/2018/03/13/books/" rel="next" title="读过的书">
+                <i class="fa fa-chevron-left"></i> 读过的书
               </a>
             
           </div>
@@ -482,10 +495,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/23/kcptun/" rel="prev" title="手把手教你用kcptun加速，获得更快的访问速度">
-                手把手教你用kcptun加速，获得更快的访问速度 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,7 +660,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令简介"><span class="nav-number">1.</span> <span class="nav-text">命令简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用举例"><span class="nav-number">2.</span> <span class="nav-text">使用举例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#退出任务"><span class="nav-number">3.</span> <span class="nav-text">退出任务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#骚操作"><span class="nav-number">2.</span> <span class="nav-text">骚操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册成功"><span class="nav-number">3.</span> <span class="nav-text">注册成功</span></a></li></ol></div>
             
 
           </div>
@@ -814,9 +823,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://sheng123.github.io/2018/01/23/linux-nohup/';
-          this.page.identifier = '2018/01/23/linux-nohup/';
-          this.page.title = 'Linux的nohup命令';
+          this.page.url = 'http://sheng123.github.io/2018/07/13/idea/';
+          this.page.identifier = '2018/07/13/idea/';
+          this.page.title = 'IntelliJ IDEA license server服务器搭建';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://sheng.disqus.com/embed.js';
